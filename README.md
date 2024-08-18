@@ -2,7 +2,7 @@
 
 # DML-IV
 
-This repository includes the implementation of the method proposed in "Learning Decision Policies with Instrumental Variables through Double Machine Learning", in proceedings of ICML 2024. [https://arxiv.org/abs/2405.08498] (Paper link.)
+This repository includes the implementation of the method proposed in "Learning Decision Policies with Instrumental Variables through Double Machine Learning", in proceedings of ICML 2024. [Paper Link.](https://arxiv.org/abs/2405.08498)
 
 ## Citation
 
