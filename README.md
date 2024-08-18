@@ -2,7 +2,18 @@
 
 # DML-IV
 
-This repository includes the implementation of the method proposed in "Learning Decision Policies with Instrumental Variables through Double Machine Learning", ICML 2024.
+This repository includes the implementation of the method proposed in "Learning Decision Policies with Instrumental Variables through Double Machine Learning", in proceedings of ICML 2024. [https://arxiv.org/abs/2405.08498](Paper link.)
+
+## Citation
+
+```
+@inproceedings{shao2024dmliv,
+    title={Learning Decision Policies with Instrumental Variables through Double Machine Learning},
+    author={Daqian Shao, Ashkan Soleymani, Francesco Quinzan and Marta Kwiatkowska},
+    year={2024},
+    booktitle={Proceedings of the 41rd International Conference on Machine Learning},
+}
+```
 
 ## Dependencies
 
