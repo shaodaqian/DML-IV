@@ -2,7 +2,6 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import torch
 import numpy as np
 import torch.nn.functional as F
-from deepiv.utils import device
 
 
 

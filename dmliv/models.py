@@ -2,10 +2,10 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import warnings
 import time
-import deepiv.samplers as samplers
-import deepiv.densities as densities
-from deepiv.architectures import FeedForward,MixtureGaussian,ConvNet
-from deepiv.utils import device,Averager,ResponseDataset
+from .samplers import random_gmm
+from .densities import mixture_of_gaussian_loss
+from .architectures import FeedForward,MixtureGaussian,ConvNet
+from .utils import device,Averager,ResponseDataset
 
 import torch.nn as nn
 import torch.nn.functional as F
@@ -143,7 +143,7 @@ def train_treatment(treatment_model,train_data,valid_data,batch_size,loss,epochs
 
     """ setup loss """
     if loss == 'mixture_of_gaussians':
-        criterion = densities.mixture_of_gaussian_loss
+        criterion = mixture_of_gaussian_loss
     # loss averager
 
     # filter that only require gradient decent
@@ -240,7 +240,7 @@ class Treatment(nn.Module):
         # inputs = [i.repeat(n_samples, axis=0) for i in inputs]
 
         [pi, mu, log_sig] = out
-        samples = samplers.random_gmm(pi, mu, torch.exp(log_sig))
+        samples = random_gmm(pi, mu, torch.exp(log_sig))
         return samples
 
 

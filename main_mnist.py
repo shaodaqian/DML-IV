@@ -5,14 +5,12 @@ import time
 import random
 
 import warnings
-from deepiv.models import Response,Treatment,train_treatment,train_response,Ymodel,train_Ymodel,train_response_kfold
-import deepiv.architectures as architectures
-import deepiv.densities as densities
+from dmliv.models import Response,Treatment,train_treatment,train_response,Ymodel,train_Ymodel,train_response_kfold
 import torch
 import torch.optim as optim
 from torch.utils.data import random_split,ConcatDataset
 import numpy as np
-from deepiv.utils import ResponseDataset,device,Averager
+from dmliv.utils import ResponseDataset,device,Averager
 import data_generator
 import datetime
 
